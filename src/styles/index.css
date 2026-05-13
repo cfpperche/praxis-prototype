@@ -11,6 +11,17 @@
     @apply bg-ink-950 text-ink-100 font-sans antialiased;
   }
 
+  body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: 50;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.5 0'/></filter><rect width='220' height='220' filter='url(%23n)'/></svg>");
+    opacity: 0.04;
+    mix-blend-mode: overlay;
+  }
+
   ::selection {
     @apply bg-accent-500/40 text-white;
   }
@@ -87,7 +98,71 @@
   }
 
   .card {
-    @apply rounded-2xl border border-ink-800 bg-ink-900/60 p-6 transition-colors hover:border-ink-700;
+    @apply rounded-2xl border border-ink-800 bg-ink-900/60 p-6 relative isolate;
+    transition: transform 220ms cubic-bezier(0.22, 1, 0.36, 1), border-color 220ms ease;
+  }
+
+  .card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(70, 187, 157, 0.4);
+  }
+
+  .card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 26px;
+    height: 26px;
+    border-top: 1.5px solid rgb(120, 213, 187);
+    border-right: 1.5px solid rgb(120, 213, 187);
+    border-top-right-radius: 1rem;
+    opacity: 0;
+    transition: opacity 280ms ease;
+    pointer-events: none;
+  }
+
+  .card:hover::before {
+    opacity: 0.9;
+  }
+
+  .card-lift {
+    position: relative;
+    isolation: isolate;
+    transition: transform 220ms cubic-bezier(0.22, 1, 0.36, 1), border-color 220ms ease;
+  }
+
+  .card-lift:hover {
+    transform: translateY(-3px);
+    border-color: rgba(70, 187, 157, 0.4);
+  }
+
+  .card-lift::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 26px;
+    height: 26px;
+    border-top: 1.5px solid rgb(120, 213, 187);
+    border-right: 1.5px solid rgb(120, 213, 187);
+    border-top-right-radius: inherit;
+    opacity: 0;
+    transition: opacity 280ms ease;
+    pointer-events: none;
+  }
+
+  .card-lift:hover::before {
+    opacity: 0.9;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .card, .card-lift {
+      transition: none;
+    }
+    .card:hover, .card-lift:hover {
+      transform: none;
+    }
   }
 
   .btn-primary {

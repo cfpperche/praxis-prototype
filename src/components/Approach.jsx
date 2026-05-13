@@ -29,7 +29,7 @@ export default function Approach() {
         <ol className="mt-12 grid gap-5 sm:grid-cols-2">
           {phases.map((p, i) => (
             <Reveal key={p.phase} delay={i * 70}>
-              <li className="flex h-full flex-col rounded-2xl border border-ink-800 bg-ink-900/50 p-6">
+              <li className="card-lift flex h-full flex-col rounded-2xl border border-ink-800 bg-ink-900/50 p-6">
                 <div className="flex items-center gap-3">
                   <span className="flex h-9 w-9 items-center justify-center rounded-full border border-accent-500/40 bg-ink-950 font-mono text-sm font-medium text-accent-300">
                     {p.phase}

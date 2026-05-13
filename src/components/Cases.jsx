@@ -22,7 +22,7 @@ export default function Cases() {
         <div className="mt-14 grid gap-5 lg:grid-cols-3">
           {items.map((item, i) => (
             <Reveal key={i} delay={i * 90}>
-              <article className="flex h-full flex-col gap-5 rounded-2xl border border-ink-800 bg-ink-900/50 p-7">
+              <article className="card-lift flex h-full flex-col gap-5 rounded-2xl border border-ink-800 bg-ink-900/50 p-7">
                 <span className="self-start rounded-full border border-accent-500/30 bg-accent-500/10 px-3 py-1 text-xs font-medium uppercase tracking-wider text-accent-200">
                   {item.industry}
                 </span>
