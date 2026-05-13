@@ -127,7 +127,7 @@ function CycleDiagram({ phases, cycleLabel }) {
         x="240"
         y="275"
         textAnchor="middle"
-        fontFamily="Inter, system-ui, sans-serif"
+        fontFamily="Geist, Inter, system-ui, sans-serif"
         fontSize="11"
         letterSpacing="0.08em"
         fill="#aeb6c6"
@@ -155,7 +155,7 @@ function CycleDiagram({ phases, cycleLabel }) {
               x={pos.x}
               y={pos.y + 10}
               textAnchor={pos.anchor}
-              fontFamily="Inter, system-ui, sans-serif"
+              fontFamily="Geist, Inter, system-ui, sans-serif"
               fontSize="17"
               fontWeight="600"
               fill="#ffffff"

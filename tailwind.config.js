@@ -31,7 +31,7 @@ export default {
         }
       },
       fontFamily: {
-        sans: ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'Segoe UI', 'sans-serif'],
+        sans: ['Geist', 'Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'Segoe UI', 'sans-serif'],
         serif: ['Fraunces', 'Source Serif Pro', 'Georgia', 'serif'],
         mono: ['JetBrains Mono', 'ui-monospace', 'monospace']
       },
