@@ -5,7 +5,7 @@ export default function Hero() {
   const labels = raw('hero.graphic') || { before: 'Before', inProgress: 'In progress', after: 'After' };
 
   return (
-    <section id="top" className="section pt-16 sm:pt-20">
+    <section id="top" className="section section-ambient section-orb-hero pt-16 sm:pt-20">
       <div className="container-narrow">
         <div className="grid items-center gap-12 lg:grid-cols-[1.1fr_1fr]">
           <div className="max-w-2xl">

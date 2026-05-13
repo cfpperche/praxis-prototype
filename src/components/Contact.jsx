@@ -11,7 +11,7 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="section section-divider">
+    <section id="contact" className="section section-divider section-ambient section-orb-soft">
       <div className="container-narrow">
         <div className="grid gap-12 lg:grid-cols-2">
           <div className="max-w-xl">

@@ -10,7 +10,7 @@ export default function Capabilities() {
   const outcomeLabel = t('capabilities.outcomeLabel');
 
   return (
-    <section id="capabilities" className="section section-divider">
+    <section id="capabilities" className="section section-divider section-ambient section-line-grid">
       <div className="container-narrow">
         <Reveal>
           <header className="max-w-2xl">

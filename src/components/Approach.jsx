@@ -10,7 +10,7 @@ export default function Approach() {
   const transformationStates = raw('approach.transformationStates') || [];
 
   return (
-    <section id="approach" className="section section-divider">
+    <section id="approach" className="section section-divider section-ambient section-orb-soft section-dot-grid-soft">
       <div className="container-narrow">
         <Reveal>
           <header className="max-w-2xl">

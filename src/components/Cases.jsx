@@ -9,7 +9,7 @@ export default function Cases() {
   const outcomeLabel = t('cases.outcomeLabel');
 
   return (
-    <section id="cases" className="section section-divider">
+    <section id="cases" className="section section-divider section-ambient section-dot-grid">
       <div className="container-narrow">
         <Reveal>
           <header className="max-w-2xl">

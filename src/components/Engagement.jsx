@@ -6,7 +6,7 @@ export default function Engagement() {
   const items = raw('engagement.items') || [];
 
   return (
-    <section id="engagement" className="section section-divider">
+    <section id="engagement" className="section section-divider section-ambient section-line-grid">
       <div className="container-narrow">
         <Reveal>
           <header className="max-w-2xl">

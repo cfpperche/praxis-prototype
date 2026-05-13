@@ -105,4 +105,91 @@
   .section-divider {
     @apply border-t border-ink-800;
   }
+
+  .section-ambient {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+  }
+
+  .section-dot-grid::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-image: radial-gradient(circle, rgba(70, 187, 157, 0.11) 1px, transparent 1.2px);
+    background-size: 28px 28px;
+    -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 45%, #000 25%, transparent 100%);
+    mask-image: radial-gradient(ellipse 70% 60% at 50% 45%, #000 25%, transparent 100%);
+    pointer-events: none;
+  }
+
+  .section-dot-grid-soft::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-image: radial-gradient(circle, rgba(70, 187, 157, 0.07) 1px, transparent 1.2px);
+    background-size: 32px 32px;
+    -webkit-mask-image: radial-gradient(ellipse 65% 55% at 50% 50%, #000 20%, transparent 100%);
+    mask-image: radial-gradient(ellipse 65% 55% at 50% 50%, #000 20%, transparent 100%);
+    pointer-events: none;
+  }
+
+  .section-line-grid::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-image:
+      linear-gradient(to right, rgba(174, 182, 198, 0.045) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(174, 182, 198, 0.045) 1px, transparent 1px);
+    background-size: 36px 36px;
+    -webkit-mask-image: radial-gradient(ellipse 78% 65% at 50% 45%, #000 20%, transparent 100%);
+    mask-image: radial-gradient(ellipse 78% 65% at 50% 45%, #000 20%, transparent 100%);
+    pointer-events: none;
+  }
+
+  .section-orb-hero::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: -12%;
+    left: -8%;
+    width: 540px;
+    height: 540px;
+    border-radius: 9999px;
+    background: radial-gradient(circle, rgba(70, 187, 157, 0.20), transparent 70%);
+    filter: blur(70px);
+    pointer-events: none;
+  }
+
+  .section-orb-hero::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    bottom: -20%;
+    right: -10%;
+    width: 580px;
+    height: 580px;
+    border-radius: 9999px;
+    background: radial-gradient(circle, rgba(110, 140, 210, 0.12), transparent 70%);
+    filter: blur(80px);
+    pointer-events: none;
+  }
+
+  .section-orb-soft::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    width: 640px;
+    height: 640px;
+    transform: translate(-50%, -50%);
+    border-radius: 9999px;
+    background: radial-gradient(circle, rgba(70, 187, 157, 0.10), transparent 65%);
+    filter: blur(90px);
+    pointer-events: none;
+  }
 }
