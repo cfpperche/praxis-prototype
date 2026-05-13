@@ -39,11 +39,27 @@ export default function Cases() {
                   <p className="text-sm leading-relaxed text-ink-200">{item.work}</p>
                 </div>
 
-                <div className="mt-auto rounded-xl border border-accent-500/20 bg-accent-500/5 p-4">
-                  <p className="mb-2 text-xs uppercase tracking-wider text-accent-300">
-                    {outcomeLabel}
-                  </p>
-                  <p className="text-sm font-medium leading-relaxed text-white">{item.outcome}</p>
+                <div className="mt-auto overflow-hidden rounded-xl border border-accent-500/20 bg-accent-500/5">
+                  {Array.isArray(item.metrics) && item.metrics.length > 0 && (
+                    <div className="grid grid-cols-2 divide-x divide-accent-500/15 border-b border-accent-500/15">
+                      {item.metrics.slice(0, 2).map((m, idx) => (
+                        <div key={idx} className="flex flex-col gap-1 p-4">
+                          <span className="font-serif text-2xl font-semibold leading-tight text-white">
+                            {m.headline}
+                          </span>
+                          <span className="text-[11px] uppercase tracking-wider text-accent-200/80">
+                            {m.label}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                  <div className="p-4">
+                    <p className="mb-2 text-xs uppercase tracking-wider text-accent-300">
+                      {outcomeLabel}
+                    </p>
+                    <p className="text-sm leading-relaxed text-white">{item.outcome}</p>
+                  </div>
                 </div>
               </article>
             </Reveal>

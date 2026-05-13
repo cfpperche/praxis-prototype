@@ -6,6 +6,7 @@ const icons = [PlatformIcon, RoadmapIcon, ShieldIcon, NetworkIcon, ContractIcon,
 export default function Capabilities() {
   const { t, raw } = useTranslation();
   const items = raw('capabilities.items') || [];
+  const tiers = raw('capabilities.tiers') || ['Build', 'Decide', 'Sustain'];
   const outcomeLabel = t('capabilities.outcomeLabel');
 
   return (
@@ -19,25 +20,44 @@ export default function Capabilities() {
           </header>
         </Reveal>
 
-        <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {items.map((item, i) => {
-            const Icon = icons[i] || PlatformIcon;
-            return (
-              <Reveal key={i} delay={(i % 3) * 80}>
-                <article className="card flex h-full flex-col">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-accent-500/10 text-accent-300">
-                    <Icon />
-                  </div>
-                  <h3 className="heading-3 mt-5">{item.title}</h3>
-                  <p className="body-sm mt-3 flex-1">{item.description}</p>
-                  <div className="mt-6 border-t border-ink-800 pt-4">
-                    <p className="text-xs uppercase tracking-wider text-ink-400">{outcomeLabel}</p>
-                    <p className="mt-1 text-sm text-ink-200">{item.outcome}</p>
-                  </div>
-                </article>
+        <div className="mt-14 grid gap-8 lg:grid-cols-3 lg:gap-5">
+          {tiers.map((tierName, tierIdx) => (
+            <div key={tierIdx} className="flex flex-col gap-5">
+              <Reveal delay={tierIdx * 80}>
+                <div className="flex items-center gap-3">
+                  <span className="font-mono text-xs uppercase tracking-wider text-accent-300">
+                    {`0${tierIdx + 1}`}
+                  </span>
+                  <span className="text-xs font-semibold uppercase tracking-[0.18em] text-ink-100">
+                    {tierName}
+                  </span>
+                  <span aria-hidden="true" className="h-px flex-1 bg-ink-800" />
+                </div>
               </Reveal>
-            );
-          })}
+
+              {items.slice(tierIdx * 2, tierIdx * 2 + 2).map((item, i) => {
+                const idx = tierIdx * 2 + i;
+                const Icon = icons[idx] || PlatformIcon;
+                return (
+                  <Reveal key={idx} delay={tierIdx * 80 + (i + 1) * 70}>
+                    <article className="card flex h-full flex-col">
+                      <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-accent-500/10 text-accent-300">
+                        <Icon />
+                      </div>
+                      <h3 className="heading-3 mt-5">{item.title}</h3>
+                      <p className="body-sm mt-3 flex-1">{item.description}</p>
+                      <div className="mt-6 border-t border-ink-800 pt-4">
+                        <p className="text-xs uppercase tracking-wider text-ink-400">
+                          {outcomeLabel}
+                        </p>
+                        <p className="mt-1 text-sm text-ink-200">{item.outcome}</p>
+                      </div>
+                    </article>
+                  </Reveal>
+                );
+              })}
+            </div>
+          ))}
         </div>
 
         <Reveal delay={150}>

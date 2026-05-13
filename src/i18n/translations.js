@@ -30,7 +30,8 @@ export const translations = {
       subhead:
         'We design, build, and run the digital solutions that move enterprises forward. From process automation to AI-powered platforms, every engagement is scoped against a measurable business outcome.',
       ctaPrimary: 'Start a conversation',
-      ctaSecondary: 'Explore capabilities'
+      ctaSecondary: 'Explore capabilities',
+      graphic: { before: 'Before', inProgress: 'In progress', after: 'After' }
     },
     challenge: {
       eyebrow: 'The challenge',
@@ -68,6 +69,7 @@ export const translations = {
       subtitle:
         'Six capability lines covering the full digital transformation lifecycle. Each delivered to a defined business outcome, not just a technical artifact.',
       outcomeLabel: 'Business outcome',
+      tiers: ['Build', 'Decide', 'Sustain'],
       items: [
         {
           title: 'Process Automation and Intelligent Operations',
@@ -169,6 +171,10 @@ export const translations = {
             'Mid-sized bank with manual invoice and reconciliation flows spread across twelve operations teams. Average cycle measured in business days; audit preparation consumed two weeks per quarter.',
           work:
             'Agentic document-processing pipeline with audit-grade logging, integrated with the legacy ledger. Phased rollout per operations team and knowledge transfer to internal staff.',
+          metrics: [
+            { headline: '8d → 4h', label: 'Average cycle time' },
+            { headline: '2w → Auto', label: 'Audit preparation' }
+          ],
           outcome:
             'Average cycle reduced from eight business days to four hours. Audit trails generated automatically, with no net change to the compliance footprint.'
         },
@@ -178,6 +184,10 @@ export const translations = {
             'Hospital network with patient data fragmented across seven systems. Clinical staff spent significant time hunting for current data; care coordination relied on memory and email.',
           work:
             'Unified data platform with real-time aggregation and a decision-support layer surfaced inside the clinical UI. Built to LGPD and HIPAA controls.',
+          metrics: [
+            { headline: '7 → 1', label: 'Patient data systems' },
+            { headline: '−60%', label: 'Staff time hunting data' }
+          ],
           outcome:
             'Care coordination decisions backed by current data. Staff time spent on data hunting reduced by roughly 60%. Clinical leadership reports faster escalation paths.'
         },
@@ -187,6 +197,10 @@ export const translations = {
             'B2B SaaS scaling engineering from twenty to eighty contributors. Regression rate climbing; release cadence slipping from weekly to once every three weeks.',
           work:
             'AI-augmented delivery practice with automated quality gates, architecture-aware code review, and embedded engineering coaching for senior staff.',
+          metrics: [
+            { headline: 'Weekly', label: 'Release cadence restored' },
+            { headline: '−40%', label: 'Regression rate' }
+          ],
           outcome:
             'Release cadence restored to weekly. Regression rate down roughly 40%. New-hire onboarding time halved.'
         }
@@ -289,7 +303,8 @@ export const translations = {
       subhead:
         'Projetamos, construímos e operamos as soluções digitais que movem empresas para frente. Da automação de processos a plataformas de IA, cada engajamento é amarrado a um resultado de negócio mensurável.',
       ctaPrimary: 'Iniciar conversa',
-      ctaSecondary: 'Conhecer capacidades'
+      ctaSecondary: 'Conhecer capacidades',
+      graphic: { before: 'Antes', inProgress: 'Em transformação', after: 'Depois' }
     },
     challenge: {
       eyebrow: 'O desafio',
@@ -327,6 +342,7 @@ export const translations = {
       subtitle:
         'Seis linhas de capacidade cobrindo o ciclo completo de transformação digital. Cada uma entregue contra um resultado de negócio definido, não apenas contra um artefato técnico.',
       outcomeLabel: 'Resultado de negócio',
+      tiers: ['Construir', 'Decidir', 'Sustentar'],
       items: [
         {
           title: 'Automação de Processos e Operações Inteligentes',
@@ -428,6 +444,10 @@ export const translations = {
             'Banco de médio porte com fluxos manuais de invoice e conciliação distribuídos entre doze times de operação. Ciclo médio medido em dias úteis; preparação de auditoria consumindo duas semanas por trimestre.',
           work:
             'Pipeline agentivo de processamento de documentos com logging em nível de auditoria, integrado ao ledger legado. Rollout faseado por time de operação e transferência de conhecimento para staff interno.',
+          metrics: [
+            { headline: '8d → 4h', label: 'Tempo de ciclo médio' },
+            { headline: '2s → Auto', label: 'Preparação de auditoria' }
+          ],
           outcome:
             'Ciclo médio reduzido de oito dias úteis para quatro horas. Trilhas de auditoria geradas automaticamente, sem mudança líquida na pegada de compliance.'
         },
@@ -437,6 +457,10 @@ export const translations = {
             'Rede hospitalar com dados de paciente fragmentados em sete sistemas. Equipe clínica perdia tempo significativo caçando dados atuais; coordenação de cuidado dependia de memória e e-mail.',
           work:
             'Plataforma de dados unificada com agregação em tempo real e camada de suporte à decisão exposta dentro do UI clínico. Construída sob controles LGPD e HIPAA.',
+          metrics: [
+            { headline: '7 → 1', label: 'Sistemas de dados do paciente' },
+            { headline: '−60%', label: 'Tempo do staff caçando dado' }
+          ],
           outcome:
             'Decisões de coordenação de cuidado ancoradas em dado atual. Tempo de staff caçando dado reduzido em aproximadamente 60%. Liderança clínica relata caminhos de escalação mais rápidos.'
         },
@@ -446,6 +470,10 @@ export const translations = {
             'SaaS B2B escalando engenharia de vinte para oitenta contribuidores. Taxa de regressão subindo; cadência de release escorregando de semanal para uma vez a cada três semanas.',
           work:
             'Prática de entrega aumentada por IA com quality gates automatizados, code review consciente de arquitetura e coaching de engenharia embarcado para staff sênior.',
+          metrics: [
+            { headline: 'Semanal', label: 'Cadência de release restaurada' },
+            { headline: '−40%', label: 'Taxa de regressão' }
+          ],
           outcome:
             'Cadência de release restaurada para semanal. Taxa de regressão caiu aproximadamente 40%. Tempo de onboarding de novo contratado reduzido pela metade.'
         }
@@ -548,7 +576,8 @@ export const translations = {
       subhead:
         'Diseñamos, construimos y operamos las soluciones digitales que mueven a las empresas hacia adelante. De la automatización de procesos a plataformas de IA, cada contratación se ata a un resultado de negocio medible.',
       ctaPrimary: 'Iniciar conversación',
-      ctaSecondary: 'Conocer capacidades'
+      ctaSecondary: 'Conocer capacidades',
+      graphic: { before: 'Antes', inProgress: 'En transformación', after: 'Después' }
     },
     challenge: {
       eyebrow: 'El desafío',
@@ -586,6 +615,7 @@ export const translations = {
       subtitle:
         'Seis líneas de capacidad que cubren el ciclo completo de transformación digital. Cada una entregada contra un resultado de negocio definido, no solo contra un artefacto técnico.',
       outcomeLabel: 'Resultado de negocio',
+      tiers: ['Construir', 'Decidir', 'Sostener'],
       items: [
         {
           title: 'Automatización de Procesos y Operaciones Inteligentes',
@@ -687,6 +717,10 @@ export const translations = {
             'Banco mediano con flujos manuales de invoice y conciliación distribuidos en doce equipos de operación. Ciclo promedio medido en días hábiles; preparación de auditoría consumiendo dos semanas por trimestre.',
           work:
             'Pipeline agéntico de procesamiento de documentos con logging de nivel auditoría, integrado al ledger legado. Rollout por fases por equipo de operación y transferencia de conocimiento al staff interno.',
+          metrics: [
+            { headline: '8d → 4h', label: 'Tiempo de ciclo promedio' },
+            { headline: '2s → Auto', label: 'Preparación de auditoría' }
+          ],
           outcome:
             'Ciclo promedio reducido de ocho días hábiles a cuatro horas. Registros de auditoría generados automáticamente, sin cambio neto en la huella de cumplimiento.'
         },
@@ -696,6 +730,10 @@ export const translations = {
             'Red hospitalaria con datos de paciente fragmentados en siete sistemas. El staff clínico perdía tiempo significativo buscando datos actuales; la coordinación de cuidado dependía de memoria y correo.',
           work:
             'Plataforma de datos unificada con agregación en tiempo real y una capa de soporte a la decisión expuesta dentro del UI clínico. Construida bajo controles LGPD y HIPAA.',
+          metrics: [
+            { headline: '7 → 1', label: 'Sistemas de datos del paciente' },
+            { headline: '−60%', label: 'Tiempo del staff buscando datos' }
+          ],
           outcome:
             'Decisiones de coordinación de cuidado ancladas en datos actuales. Tiempo del staff buscando datos reducido aproximadamente 60%. El liderazgo clínico reporta rutas de escalamiento más rápidas.'
         },
@@ -705,6 +743,10 @@ export const translations = {
             'SaaS B2B escalando ingeniería de veinte a ochenta contribuyentes. Tasa de regresión subiendo; cadencia de release deslizándose de semanal a una vez cada tres semanas.',
           work:
             'Práctica de entrega aumentada por IA con quality gates automatizados, code review consciente de arquitectura y coaching de ingeniería embebido para staff sénior.',
+          metrics: [
+            { headline: 'Semanal', label: 'Cadencia de release restaurada' },
+            { headline: '−40%', label: 'Tasa de regresión' }
+          ],
           outcome:
             'Cadencia de release restaurada a semanal. Tasa de regresión bajó aproximadamente 40%. Tiempo de onboarding de nuevo contratado reducido a la mitad.'
         }

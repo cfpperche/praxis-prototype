@@ -1,5 +1,6 @@
 import { useTranslation } from '../i18n/useTranslation.jsx';
 import Reveal from './Reveal.jsx';
+import { useReveal } from '../hooks/useReveal.js';
 
 export default function Approach() {
   const { t, raw } = useTranslation();
@@ -22,10 +23,7 @@ export default function Approach() {
         <Reveal>
           <div className="mt-14 hidden lg:block">
             <div className="relative">
-              <div
-                aria-hidden="true"
-                className="absolute left-[12.5%] right-[12.5%] top-5 h-px bg-gradient-to-r from-transparent via-ink-600 to-transparent"
-              />
+              <ConnectorLine />
               <div className="grid grid-cols-4">
                 {phases.map((p) => (
                   <div key={p.phase} className="flex justify-center">
@@ -87,5 +85,20 @@ export default function Approach() {
         </Reveal>
       </div>
     </section>
+  );
+}
+
+function ConnectorLine() {
+  const [ref, revealed] = useReveal({ threshold: 0.3 });
+  return (
+    <div
+      ref={ref}
+      aria-hidden="true"
+      className="absolute left-[12.5%] right-[12.5%] top-5 h-px origin-left bg-ink-600/80"
+      style={{
+        transform: revealed ? 'scaleX(1)' : 'scaleX(0)',
+        transition: 'transform 1100ms cubic-bezier(0.22, 1, 0.36, 1)'
+      }}
+    />
   );
 }
