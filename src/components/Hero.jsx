@@ -127,20 +127,27 @@ function TransformationGraphic({ labels }) {
           <circle cx="358" cy="196" r="3.5" />
         </g>
         <g stroke="#46bb9d" strokeWidth="1.2" fill="none">
+          {/* Row 1: left → right */}
           <path d="M327 56 L355 56" />
           <path d="M353 51 L358 56 L353 61" strokeLinecap="round" strokeLinejoin="round" />
-          <path d="M324 60 L324 96" />
-          <path d="M319 91 L324 96 L329 91" strokeLinecap="round" strokeLinejoin="round" />
-          <path d="M327 100 L355 100" />
-          <path d="M353 95 L358 100 L353 105" strokeLinecap="round" strokeLinejoin="round" />
-          <path d="M358 104 L358 144" />
-          <path d="M353 139 L358 144 L363 139" strokeLinecap="round" strokeLinejoin="round" />
+          {/* Right column ↓ row 1 → row 2 */}
+          <path d="M358 60 L358 96" />
+          <path d="M353 91 L358 96 L363 91" strokeLinecap="round" strokeLinejoin="round" />
+          {/* Row 2: right → left */}
+          <path d="M355 100 L327 100" />
+          <path d="M329 95 L324 100 L329 105" strokeLinecap="round" strokeLinejoin="round" />
+          {/* Left column ↓ row 2 → row 3 */}
+          <path d="M324 104 L324 144" />
+          <path d="M319 139 L324 144 L329 139" strokeLinecap="round" strokeLinejoin="round" />
+          {/* Row 3: left → right */}
           <path d="M327 148 L355 148" />
           <path d="M353 143 L358 148 L353 153" strokeLinecap="round" strokeLinejoin="round" />
-          <path d="M324 152 L324 192" />
-          <path d="M319 187 L324 192 L329 187" strokeLinecap="round" strokeLinejoin="round" />
-          <path d="M327 196 L355 196" />
-          <path d="M353 191 L358 196 L353 201" strokeLinecap="round" strokeLinejoin="round" />
+          {/* Right column ↓ row 3 → row 4 */}
+          <path d="M358 152 L358 192" />
+          <path d="M353 187 L358 192 L363 187" strokeLinecap="round" strokeLinejoin="round" />
+          {/* Row 4: right → left */}
+          <path d="M355 196 L327 196" />
+          <path d="M329 191 L324 196 L329 201" strokeLinecap="round" strokeLinejoin="round" />
         </g>
       </g>
 
