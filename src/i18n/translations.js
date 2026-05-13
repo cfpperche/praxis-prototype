@@ -114,7 +114,8 @@ export const translations = {
       eyebrow: 'How we work',
       title: 'The Praxis Method.',
       subtitle:
-        'A four-phase delivery model that moves from business diagnosis to sustained operations, with named outcomes at each stage.',
+        'A four-phase cyclic delivery model. Sustain feeds back into the next diagnosis, with named outcomes at every stage.',
+      cycleLabel: 'Continuous improvement',
       outputLabel: 'Stage outcome',
       phases: [
         {
@@ -387,7 +388,8 @@ export const translations = {
       eyebrow: 'Como trabalhamos',
       title: 'O Método Praxis.',
       subtitle:
-        'Um modelo de entrega em quatro fases, do diagnóstico de negócio à operação sustentada, com resultados nomeados em cada estágio.',
+        'Um modelo cíclico de entrega em quatro fases. Sustentar realimenta o próximo diagnóstico, com resultados nomeados em cada estágio.',
+      cycleLabel: 'Melhoria contínua',
       outputLabel: 'Resultado da fase',
       phases: [
         {
@@ -660,7 +662,8 @@ export const translations = {
       eyebrow: 'Cómo trabajamos',
       title: 'El Método Praxis.',
       subtitle:
-        'Un modelo de entrega en cuatro fases, del diagnóstico de negocio a la operación sostenida, con resultados nombrados en cada etapa.',
+        'Un modelo cíclico de entrega en cuatro fases. Sostener realimenta el siguiente diagnóstico, con resultados nombrados en cada etapa.',
+      cycleLabel: 'Mejora continua',
       outputLabel: 'Resultado de la fase',
       phases: [
         {
